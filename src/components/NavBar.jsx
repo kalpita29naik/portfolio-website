@@ -30,7 +30,7 @@ export default function NavBar() {
           </li>
           <li>
             <a
-              href="#"
+              href="#projects"
               className="text-gray-300 hover:text-white font-bold font-sans"
             >
               Projects
@@ -38,7 +38,9 @@ export default function NavBar() {
           </li>
           <li>
             <a
-              href="#"
+              href="https://drive.google.com/file/d/17puzIQHJH67WeiO5gr6AJpU0QcbuDToa/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-gray-300 hover:text-white font-bold font-sans"
             >
               Resume
@@ -46,7 +48,7 @@ export default function NavBar() {
           </li>
           <li>
             <a
-              href="#"
+              href="#contact"
               className="text-gray-300 hover:text-white font-bold font-sans"
             >
               Contact
