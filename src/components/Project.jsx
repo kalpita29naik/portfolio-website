@@ -1,31 +1,36 @@
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import luckyShrub from "../assets/luckyShrub.png";
+import flipkart from "../assets/flipkart.png";
+import quote from "../assets/quote.png";
+import quizApp from "../assets/quizApp.png";
+import todoApp from "../assets/todoApp.png";
 
 // Sample images and data
 const projects = [
   {
     name: "Lucky Shrub",
-    image: "/src/assets/luckyShrub.png",
+    image: luckyShrub,
     github: "https://kalpita29naik.github.io/Lucky-Shrub/",
   },
   {
     name: "Flipkart Clone",
-    image: "/src/assets/flipkart.png",
+    image: flipkart,
     github: "https://github.com/kalpita29naik/Flipkart-clone",
   },
   {
     name: "Quotes App",
-    image: "/src/assets/quote.png",
+    image: quote,
     github: "https://github.com/kalpita29naik/QUOTES_APP",
   },
   {
     name: "Brain Storming: Quiz App",
-    image: "/src/assets/quizApp.png",
+    image: quizApp,
     github: "https://github.com/kalpita29naik/BrainStorming",
   },
   {
     name: "To-Do App",
-    image: "/src/assets/todoApp.png",
+    image: todoApp,
     github: "https://github.com/kalpita29naik/TODO_APP",
   },
 ];
