@@ -3,13 +3,14 @@ import Contact from "./Contact";
 export default function About() {
   return (
     <div
-      className="ml-8 mr-8 mt-10 flex flex-col md:flex-row gap-10 text-white mb-64"
+      className="px-4 md:px-10 mt-10 flex flex-col md:flex-row gap-12 text-white"
       id="about"
+      data-aos="fade-up"
     >
       {/* About Me Section */}
       <div className="md:w-2/3">
-        <h2 className="text-4xl font-bold mb-4 mt-20">About Me</h2>
-        <p className="text-lg leading-relaxed mt-10 ">
+        <h2 className="text-3xl sm:text-4xl font-bold mb-4 mt-10">About Me</h2>
+        <p className="text-base sm:text-lg leading-relaxed mt-6 text-gray-200">
           Hi! I’m Kalpita, a passionate{" "}
           <span className="font-bold text-[#b3c746]">Frontend Developer</span>{" "}
           with a strong focus on building responsive, user-friendly, and
@@ -30,48 +31,46 @@ export default function About() {
           thrive in collaborative environments and enjoy solving real-world
           problems through code.
         </p>
-        <div>
+
+        <div className="mt-10">
           <Contact />
         </div>
       </div>
 
       {/* Education Timeline */}
       <div className="md:w-1/3">
-        <h2 className="text-4xl font-bold mb-4 mt-20">Education</h2>
-        <div className=" relative border-l border-gray-400 pl-6 mt-10 ">
-          {/* Entry 1 */}
-          <div className="mb-10 relative">
-            <div className="absolute w-4 h-4 bg-[#b3c746] rounded-full -left-8 top-1.4"></div>
-            <h3 className="text-xl font-semibold text-white">
-              Goa College of Engineering
-            </h3>
-            <span className="text-sm text-gray-400">2021 – 2025</span>
-            <p className="text-md text-gray-300 mt-1">
-              B.E. in Computer Engineering
-            </p>
-          </div>
+        <h2 className="text-3xl sm:text-4xl font-bold mb-4 mt-10">Education</h2>
 
-          {/* Entry 2 */}
-          <div className="mb-10 relative">
-            <div className="absolute w-4 h-4 bg-[#b3c746] rounded-full -left-8 top-1.5"></div>
-            <h3 className="text-xl font-semibold text-white">
-              Shree Damodar Higher Secondary School of Science
-            </h3>
-            <span className="text-sm text-gray-400">2019 – 2021</span>
-            <p className="text-md text-gray-300 mt-1">
-              Higher Secondary School
-            </p>
-          </div>
-
-          {/* Entry 3 */}
-          <div className="mb-10 relative">
-            <div className="absolute w-4 h-4 bg-[#b3c746] rounded-full -left-8 top-1.5"></div>
-            <h3 className="text-xl font-semibold text-white">
-              Mahila & Nutan English High School
-            </h3>
-            <span className="text-sm text-gray-400">2017 – 2019</span>
-            <p className="text-md text-gray-300 mt-1">Secondary School</p>
-          </div>
+        <div className="relative border-l-2 border-gray-400 pl-6 mt-6 space-y-10">
+          {/* Timeline Entry */}
+          {[
+            {
+              title: "Goa College of Engineering",
+              duration: "2021 – 2025",
+              detail: "B.E. in Computer Engineering",
+            },
+            {
+              title: "Shree Damodar Higher Secondary School of Science",
+              duration: "2019 – 2021",
+              detail: "Higher Secondary School",
+            },
+            {
+              title: "Mahila & Nutan English High School",
+              duration: "2017 – 2019",
+              detail: "Secondary School",
+            },
+          ].map((entry, idx) => (
+            <div className="relative" key={idx}>
+              <div className="absolute -left-8 top-1.5 w-4 h-4 bg-[#b3c746] rounded-full shadow-lg"></div>
+              <h3 className="text-lg sm:text-xl font-semibold">
+                {entry.title}
+              </h3>
+              <span className="text-sm text-gray-400">{entry.duration}</span>
+              <p className="text-sm sm:text-base text-gray-300 mt-1">
+                {entry.detail}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </div>

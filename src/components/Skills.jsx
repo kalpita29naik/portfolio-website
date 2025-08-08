@@ -3,135 +3,112 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Skills() {
   return (
-    <div className="flex flex-row text-white gap-4 ml-8 mr-8 mb-64" id="skills">
-      <div className="w-full md:w-1/2 ">
-        <h2 className="text-4xl font-bold mb-10 mt-20">Skills</h2>
-        <div className="grid grid-cols-4 ">
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-            alt="HTML"
-            className="w-16 h-16 m-4"
-          />
-
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
-            className="w-16 h-16 m-4"
-          />
-
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
-            className="w-16 h-16 m-4"
-          />
-
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
-            className="w-16 h-16 m-4"
-          />
-
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
-            className="w-16 h-16 m-4"
-          />
-
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
-            className="w-16 h-16 m-4"
-          />
-
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-line.svg"
-            alt="C"
-            className="w-16 h-16 m-4"
-          />
-
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"
-            className="w-16 h-16 m-4"
-          />
-
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
-            className="w-16 h-16 m-4"
-          />
-
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jest/jest-plain.svg"
-            className="w-16 h-16 m-4"
-          />
+    <div
+      className="px-4 md:px-10 mt-20 text-white flex flex-col md:flex-row gap-12"
+      id="skills"
+      data-aos="fade-up"
+    >
+      {/* Skills Grid */}
+      <div className="md:w-1/2">
+        <h2 className="text-3xl sm:text-4xl font-bold mb-8">Skills</h2>
+        <div className="grid grid-cols-3 sm:grid-cols-4 gap-6">
+          {[
+            {
+              alt: "HTML",
+              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+            },
+            {
+              alt: "CSS",
+              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+            },
+            {
+              alt: "JavaScript",
+              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+            },
+            {
+              alt: "TypeScript",
+              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+            },
+            {
+              alt: "React",
+              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+            },
+            {
+              alt: "Tailwind CSS",
+              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
+            },
+            {
+              alt: "C",
+              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-line.svg",
+            },
+            {
+              alt: "C++",
+              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg",
+            },
+            {
+              alt: "Python",
+              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+            },
+            {
+              alt: "Jest",
+              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg",
+            },
+          ].map((skill, idx) => (
+            <img
+              key={idx}
+              src={skill.src}
+              alt={skill.alt}
+              className="w-14 h-14 mx-auto transition-transform hover:scale-110 duration-300"
+              title={skill.alt}
+            />
+          ))}
         </div>
       </div>
 
-      <div className="w-full md:w-1/2">
-        <h2 className="text-4xl font-bold mb-10 mt-20">Certificates</h2>
-        <div className="grid grid-cols-2 gap-4 overflow-hidden">
-          <div className="flex border border-white rounded-md p-2 hover:bg-white hover:text-black transition-all">
-            <FontAwesomeIcon icon={faMeta} className="h-10 w-10 mr-4 " />
-            <div>
-              <p className="font-semibold">
-                Introduction to Front-End Development{" "}
-              </p>
-              <a
-                href="https://coursera.org/verify/P23Z3TWE9YXM"
-                className="underline text-sm"
-              >
-                Certificate
-              </a>
+      {/* Certificates Grid */}
+      <div className="md:w-1/2">
+        <h2 className="text-3xl sm:text-4xl font-bold mb-8">Certificates</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {[
+            {
+              name: "Introduction to Front-End Development",
+              url: "https://coursera.org/verify/P23Z3TWE9YXM",
+            },
+            {
+              name: "Programming with JavaScript",
+              url: "https://coursera.org/verify/J3U6D9FRGX2Z",
+            },
+            {
+              name: "Version Control",
+              url: "https://coursera.org/verify/RTHLTDIOL6CQ",
+            },
+            {
+              name: "HTML and CSS in depth",
+              url: "https://coursera.org/verify/3X9HKBWK0KU7",
+            },
+            {
+              name: "React Basics",
+              url: "https://coursera.org/verify/VBTFCGYA5KPF",
+            },
+          ].map((cert, idx) => (
+            <div
+              key={idx}
+              className="flex items-start border border-white rounded-md p-4 hover:bg-white hover:text-black transition-all duration-300"
+            >
+              <FontAwesomeIcon icon={faMeta} className="h-8 w-8 mr-4 mt-1" />
+              <div>
+                <p className="font-semibold leading-tight">{cert.name}</p>
+                <a
+                  href={cert.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline text-sm mt-1 inline-block"
+                >
+                  View Certificate
+                </a>
+              </div>
             </div>
-          </div>
-
-          <div className="flex border border-white rounded-md p-2 hover:bg-white hover:text-black transition-all">
-            <FontAwesomeIcon icon={faMeta} className="h-10 w-10 mr-4 " />
-            <div>
-              <p className="font-semibold"> Programming with JavaScript </p>
-              <a
-                href="https://coursera.org/verify/J3U6D9FRGX2Z"
-                className="underline text-sm"
-              >
-                Certificate
-              </a>
-            </div>
-          </div>
-
-          <div className="flex border border-white rounded-md p-2 hover:bg-white hover:text-black transition-all">
-            <FontAwesomeIcon icon={faMeta} className="h-10 w-10 mr-4 " />
-            <div>
-              <p className="font-semibold">Version Control</p>
-              <a
-                href="https://coursera.org/verify/RTHLTDIOL6CQ"
-                className="underline text-sm"
-              >
-                Certificate
-              </a>
-            </div>
-          </div>
-
-          <div className="flex border border-white rounded-md p-2 hover:bg-white hover:text-black transition-all">
-            <FontAwesomeIcon icon={faMeta} className="h-10 w-10 mr-4 " />
-            <div>
-              <p className="font-semibold"> HTML and CSS in depth</p>
-              <a
-                href="https://coursera.org/verify/3X9HKBWK0KU7"
-                className="underline text-sm"
-              >
-                Certificate
-              </a>
-            </div>
-          </div>
-
-          <div className="flex border border-white rounded-md p-3 hover:bg-white hover:text-black transition-all">
-            <FontAwesomeIcon icon={faMeta} className="h-10 w-10 mr-4" />
-            <div>
-              <p className="font-semibold">React Basics</p>
-              <a
-                href="https://coursera.org/verify/VBTFCGYA5KPF"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline text-sm"
-              >
-                View Certificate
-              </a>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>
