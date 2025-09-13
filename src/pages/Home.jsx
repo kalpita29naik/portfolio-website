@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { motion as Motion } from "framer-motion";
+import { motion } from "framer-motion";
 
 import About from "../components/About";
 import NavBar from "../components/NavBar";
