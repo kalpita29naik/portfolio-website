@@ -3,14 +3,16 @@ import Contact from "./Contact";
 export default function About() {
   return (
     <div
-      className="px-4 md:px-10 mt-10 flex flex-col md:flex-row gap-12 text-white"
+      className="px-4 sm:px-6 lg:px-12 mt-10 flex flex-col md:flex-row gap-12 text-white"
       id="about"
       data-aos="fade-up"
     >
       {/* About Me Section */}
       <div className="md:w-2/3">
-        <h2 className="text-3xl sm:text-4xl font-bold mb-4 mt-10">About Me</h2>
-        <p className="text-base sm:text-lg leading-relaxed mt-6 text-gray-200">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 mt-6">
+          About Me
+        </h2>
+        <p className="text-sm sm:text-base lg:text-lg leading-relaxed mt-4 text-gray-200">
           Hi! I’m Kalpita, a passionate{" "}
           <span className="font-bold text-[#b3c746]">Frontend Developer</span>{" "}
           with a strong focus on building responsive, user-friendly, and
@@ -32,17 +34,19 @@ export default function About() {
           problems through code.
         </p>
 
-        <div className="mt-10">
+        {/* Contact Section */}
+        <div className="mt-8 sm:mt-10">
           <Contact />
         </div>
       </div>
 
       {/* Education Timeline */}
       <div className="md:w-1/3">
-        <h2 className="text-3xl sm:text-4xl font-bold mb-4 mt-10">Education</h2>
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 mt-6">
+          Education
+        </h2>
 
-        <div className="relative border-l-2 border-gray-400 pl-6 mt-6 space-y-10">
-          {/* Timeline Entry */}
+        <div className="relative border-l-2 border-gray-500 pl-6 mt-6 space-y-8">
           {[
             {
               title: "Goa College of Engineering",
@@ -62,11 +66,13 @@ export default function About() {
           ].map((entry, idx) => (
             <div className="relative" key={idx}>
               <div className="absolute -left-8 top-1.5 w-4 h-4 bg-[#b3c746] rounded-full shadow-lg"></div>
-              <h3 className="text-lg sm:text-xl font-semibold">
+              <h3 className="text-base sm:text-lg lg:text-xl font-semibold">
                 {entry.title}
               </h3>
-              <span className="text-sm text-gray-400">{entry.duration}</span>
-              <p className="text-sm sm:text-base text-gray-300 mt-1">
+              <span className="text-xs sm:text-sm text-gray-400">
+                {entry.duration}
+              </span>
+              <p className="text-xs sm:text-sm lg:text-base text-gray-300 mt-1">
                 {entry.detail}
               </p>
             </div>
